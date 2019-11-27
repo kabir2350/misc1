@@ -1,0 +1,37 @@
+
+
+$prD=0.0001; //likelihood rate/statistics / natural case
+
+
+$prP= 0.1; // surprise / accident / mistake rate
+$prN= 0.9; // default highly likely case
+
+$prDgivenP=0; // posterior /trut
+
+$prPgivenD=0; //accuracy of diagnosis / prior
+
+$prNgivenD= 1- $prPgivenD; // conjugate prior
+$prDgivenN=0; //// // False negative (=means absence)
+
+
+
+
+//copying val
+
+$surprise=$prP;
+$default= $prN;
+
+$posterior = $prDgivenP;
+$prior =$prPgivenD;
+
+
+$conjugate_prior= 1- $prior;  
+$falsepos = $prDgivenN; 
+
+
+//formula
+
+$posterior = ($prior * $likelihood) / 
+
+
+
